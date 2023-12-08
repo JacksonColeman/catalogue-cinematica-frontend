@@ -6,7 +6,6 @@ import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Account from "./components/Account/Account";
 import Hero from "./components/Hero/Hero";
-import Sandbox from "./components/Sandbox Elements/Sandbox";
 import ListPage from "./components/Lists/ListPage";
 import ReviewPage from "./components/Reviews/ReviewPage";
 
@@ -74,8 +73,6 @@ const App = () => {
         <Route path="/" element={<Hero isLoggedIn={isLoggedIn} />} />
         <Route path="/films" element={<MovieList />} />
         <Route path="/account" element={<Account userId={user?.id} />} />
-        <Route path="/lists" element={<ListPage />} />
-        <Route path="/sandbox" element={<Sandbox />} />
         <Route path="/reviews" element={<ReviewPage />} />
       </Routes>
     </div>
