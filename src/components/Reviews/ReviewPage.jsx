@@ -8,7 +8,8 @@ const ReviewPage = () => {
   useEffect(() => {
     // Fetch reviews from 'api/reviews/all'
     fetch(
-      "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/all",
+      // "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/all",
+      "/api/reviews/all",
       {
         credentials: "include", // Add this line
       }
