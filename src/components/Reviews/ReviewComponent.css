@@ -107,3 +107,12 @@
   margin-top: 0.5rem;
   color: var(--cc-red);
 }
+
+@media (max-width: 500px) {
+  .movie-poster-img {
+    height: 8rem;
+  }
+  .review-poster-container {
+    margin-right: 1rem;
+  }
+}

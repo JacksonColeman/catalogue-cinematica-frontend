@@ -17,6 +17,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .review-page {
+    padding: 0rem;
+  }
+}
+
 .review-page-header {
   text-align: center;
   margin-bottom: 2rem;
