@@ -23,8 +23,8 @@ const LoginModal = ({ open, handleCloseModal }) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            credentials: "include",
           },
+          credentials: "include", // Place credentials option here
           body: JSON.stringify({
             username,
             password,
