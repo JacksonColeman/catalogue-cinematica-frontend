@@ -1,0 +1,29 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px; /* Set your desired width */
+  margin: auto;
+  min-height: 200px;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-item {
+  transition: transform 1s ease;
+}
+
+.active {
+  transform: translateX(0); /* Display the active item */
+}
+
+.carousel-arrow {
+  font-size: 18px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}

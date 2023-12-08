@@ -1,0 +1,15 @@
+.review-container {
+  color: var(--cc-light-grey);
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+.reviews-title {
+  margin-bottom: 0.25rem;
+}

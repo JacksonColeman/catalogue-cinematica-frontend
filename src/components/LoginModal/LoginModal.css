@@ -1,0 +1,106 @@
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  left: 0;
+  top: 0;
+  z-index: 4;
+}
+
+.login-modal-container {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0 auto;
+  width: 20rem;
+  min-height: 20rem;
+  transform: translate(-50%, 50%);
+  background-color: var(--cc-grey-7);
+  color: var(--cc-light-grey);
+  border-radius: 5px;
+  box-shadow: 0 0 20px 20px black;
+  z-index: 5;
+  padding: 2rem;
+  text-align: center;
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modal-input {
+  width: 90%;
+  background-color: var(--cc-grey-5);
+  border: none;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 5px 10px;
+  color: var(--cc-dark-grey);
+}
+
+.modal-label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.modal-button-main {
+  width: 50%;
+  height: 2rem;
+  background-color: var(--cc-grey-5);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  color: var(--cc-dark-grey);
+  font-weight: 500;
+}
+
+.modal-button-main:hover {
+  background-color: var(--cc-gold);
+}
+
+.login-modal {
+  position: relative;
+}
+
+.error-message {
+  color: var(--cc-red);
+  margin-bottom: 1rem;
+}
+
+.btn--close-modal {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(195, 188, 188);
+  font-size: 24px;
+  font-weight: 300;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 24px;
+}
+
+.sign-up-prompt {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.sign-up-link {
+  display: inline-block;
+  color: var(--cc-gold);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sign-up-link:hover,
+.sign-up-link:active {
+  display: inline-block;
+  color: var(--cc-dark-gold);
+  cursor: pointer;
+}

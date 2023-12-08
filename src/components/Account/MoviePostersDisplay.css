@@ -1,0 +1,43 @@
+.movie-posters-display-container {
+  margin-bottom: 1rem;
+}
+
+.movie-posters-display {
+  border-top: 1px solid var(--cc-grey-7);
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.movie-poster-display-img {
+  height: 12rem;
+}
+
+.review-comp-movie-title.posters-display-title {
+  font-size: 1rem;
+}
+
+.see-more {
+  text-transform: uppercase;
+  color: var(--cc-gold);
+}
+
+.see-more:hover {
+  text-transform: uppercase;
+  color: var(--cc-dark-gold);
+  cursor: pointer;
+}
+
+.movie-poster-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .movie-posters-display {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,76 @@
+.cast-container {
+  overflow-x: hidden;
+  color: var(--cc-light-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 0.25rem;
+  width: 100%;
+}
+
+.full-cast-link,
+.full-cast-link:visited {
+  display: inline-block;
+  color: var(--cc-gold);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.full-cast-link:hover,
+.full-cast-link:active {
+  color: var(--cc-dark-gold);
+  text-decoration: underline;
+}
+
+.cast-header .cast-title,
+.movie-details-header {
+  text-transform: uppercase;
+  font-size: 1.563rem;
+  font-weight: 400;
+}
+
+.cast-list {
+  /* max-width: 90%; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* justify-items: center; */
+  gap: 1rem;
+  overflow: scroll;
+  /* background-color: orangered; */
+}
+
+@media (max-width: 800px) {
+  .cast-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .cast-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .cast-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .cast-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

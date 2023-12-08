@@ -1,0 +1,71 @@
+.section-hero {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), black),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(33, 37, 41, 1)),
+    url("/img/seats.jpg");
+  image-rendering: optimizeSpeed;
+  background-size: cover;
+  color: var(--cc-light-grey);
+  background-color: var(--cc-light-grey);
+  padding: 2rem 4rem;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  text-shadow: 0px 0px 100px black;
+  padding-bottom: 3rem;
+  max-width: 55%;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    justify-content: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    max-width: 70%;
+  }
+}
+
+.hero-main-header {
+  margin-bottom: 2rem;
+}
+
+.hero-subheader {
+  font-size: 1.953rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--cc-red);
+  color: var(--cc-light-grey);
+  font-size: 1.563rem;
+  font-weight: 400;
+  border-radius: 10px;
+  animation: all 1s;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--cc-dark-red);
+  box-shadow: 0px 0px 3px var(--cc-gold);
+}
+
+.text-color-gold {
+  color: var(--cc-gold);
+}
+
+.text-semi-bold {
+  font-weight: 600;
+}

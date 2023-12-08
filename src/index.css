@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+:root {
+  --cc-black: #000;
+  --cc-dark-grey: #212529;
+  --cc-light-grey: #f8f9fa;
+  --cc-gold: #f3b61f;
+  --cc-light-gold: #f9db8f;
+  --cc-dark-gold: #c29219;
+  --cc-red: #e03131;
+  --cc-dark-red: #c92a2a;
+  --cc-grey-7: #495057;
+  --cc-grey-5: #adb5bd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: var(--cc-light-grey);
+}
+
+/* GENERAL STYLES */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.052rem;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  :root {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 950px) {
+  :root {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    font-size: 80%;
+  }
+}

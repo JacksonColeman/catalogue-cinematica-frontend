@@ -1,0 +1,109 @@
+.review-item {
+  border-top: 1px solid var(--cc-grey-7);
+  padding: 1rem;
+  /* max-height: 12rem; */
+  overflow-x: scroll;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-rating {
+  font-size: 1rem;
+}
+
+.review-username {
+  font-weight: 600;
+}
+
+.review-text {
+  padding: 1rem;
+  font-weight: 300;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--cc-grey-5);
+  margin-left: auto;
+}
+
+.review-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--cc-grey-5);
+}
+
+.heart-outline-icon {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.heart-outline-icon:hover {
+  display: inline-block;
+  color: var(--cc-red);
+  cursor: pointer;
+}
+
+.heart-fill-icon {
+  font-size: 1.2rem;
+  color: var(--cc-red);
+}
+
+.heart-fill-icon:hover {
+  cursor: pointer;
+}
+
+.reply-button:link,
+.reply-button:visited {
+  color: inherit;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.reply-button:hover,
+.reply-button:active {
+  text-decoration: underline;
+}
+
+.sm-review-item {
+  display: flex;
+  align-items: start;
+  border: none;
+  /* background-color: var(--cc-grey-7); */
+  border-top: 1px solid var(--cc-grey-7);
+}
+
+.movie-poster-img {
+  aspect-ratio: 185/278;
+  height: 12rem;
+}
+
+.review-poster-container {
+  margin-right: 2rem;
+  display: inline-block;
+}
+
+.review-comp-movie-title:link,
+.review-comp-movie-title:visited {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--cc-light-grey);
+  text-decoration: none;
+}
+
+.review-comp-movie-title:hover,
+.review-comp-movie-title:hover {
+  color: var(--cc-gold);
+}
+
+.like-error-msg {
+  margin-top: 0.5rem;
+  color: var(--cc-red);
+}

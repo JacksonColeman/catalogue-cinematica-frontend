@@ -1,0 +1,146 @@
+.backdrop-img-container {
+  background-size: cover;
+  width: 100%;
+  height: 85vh;
+  color: rgba(0, 0, 0, 0.135);
+  display: flex;
+  gap: 8rem;
+  align-items: end;
+}
+
+.movie-details-container {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to);
+  /* color: var(--cc-light-grey); */
+}
+
+.movie-details-text {
+  position: relative;
+
+  max-width: 50%;
+  width: 50%;
+  color: var(--cc-light-grey);
+  padding-bottom: 4rem;
+  padding-left: 4rem;
+}
+
+.movie-title {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  transform: translateX(-4px);
+}
+
+.overview-container {
+  width: 50%;
+  max-width: 50%;
+  position: relative;
+  color: var(--cc-light-grey);
+  padding-bottom: 4rem;
+  padding-right: 4rem;
+}
+
+.tagline {
+  font-size: 1.563rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.overview {
+  font-size: 1rem;
+}
+
+.clock-icon,
+.camera-icon,
+.cal-icon {
+  display: inline-block;
+}
+
+.runtime,
+.director,
+.release-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* bottom half of page */
+
+.movie-more-details-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn-group {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 4px;
+}
+
+.movie-btn {
+  font-family: inherit;
+  font-size: 1.5rem;
+  width: 8rem;
+  padding: 0.5rem 0rem;
+  background-color: var(--cc-grey-7);
+  color: var(--cc-light-grey);
+  border: none;
+  border-top: 2px solid var(--cc-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-btn {
+  text-decoration: none;
+}
+
+.movie-btn:hover {
+  background-color: var(--cc-grey-7);
+  color: var(--cc-gold);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.movie-btn-text {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+}
+
+.text-container {
+  margin-bottom: 2rem;
+}
+
+.favorite-btn-filled {
+  color: var(--cc-gold);
+}
+
+/* .movie-poster-img {
+  margin-left: 1rem;
+  width: 14rem;
+  border: 2px solid var(--cc-dark-grey);
+} */
+
+@media (max-width: 900px) {
+  .movie-details-text {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cast-thumbnail {
+    max-width: 150px;
+  }
+  .overview-container {
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+}

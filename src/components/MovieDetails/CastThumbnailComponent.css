@@ -1,0 +1,39 @@
+.cast-thumbnail {
+  /* background-color: var(--cc-light-grey);
+  color: var(--cc-dark-grey); */
+
+  background-color: var(--cc-grey-7);
+  color: var(--cc-light-grey);
+
+  flex-direction: column;
+  max-width: 205px;
+  overflow: hidden;
+  /* padding: 0.5rem; */
+}
+
+.cast-thumbnail-img {
+  width: 100%;
+  border: 1px solid var(--cc-grey-7);
+  aspect-ratio: 2/3;
+
+  /* padding-bottom: 10px; */
+}
+
+.cast-text {
+  padding: 0.5rem;
+  padding-right: 0rem;
+  max-width: 185px;
+  display: flex;
+  /* align-items: safe center; */
+  padding-left: 0.5rem;
+  flex-direction: column;
+}
+.actor-name {
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.actor-character {
+  font-weight: 400;
+}

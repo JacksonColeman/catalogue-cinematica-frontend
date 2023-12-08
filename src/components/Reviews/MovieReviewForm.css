@@ -1,0 +1,101 @@
+.review-modal {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  margin: 0 auto;
+  max-width: 48rem;
+  min-height: 20rem;
+  transform: translate(-50%, 20%);
+  background-color: var(--cc-grey-7);
+  color: var(--cc-light-grey);
+  border-radius: 5px;
+  box-shadow: 0 0 20px 20px black;
+  z-index: 5;
+  padding: 2rem;
+}
+
+.review-flex-container {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 750px) {
+  .review-modal {
+    min-height: 80vh;
+    transform: translate(-50%, 5%);
+  }
+
+  .review-flex-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+  }
+
+  .review-text-area {
+    height: 8rem;
+    width: 20rem;
+  }
+}
+
+.movie-review-form {
+  /* position: absolute; */
+}
+
+.review-prompt {
+  font-size: 1.33rem;
+  margin-bottom: 1rem;
+}
+.review-movie-title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.review-movie-poster {
+  max-height: 278px;
+}
+
+.review-text-area {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem;
+  background-color: var(--cc-grey-5);
+  color: var(--cc-dark-grey);
+  margin-bottom: 0.5rem;
+}
+
+.review-button {
+  margin-bottom: 1rem;
+}
+
+.modal-button-main.review-button {
+  width: 16rem;
+  background-color: var(--cc-gold);
+  color: var(--cc-dark-grey);
+}
+
+.modal-button-main.review-button:hover {
+  width: 16rem;
+  background-color: var(--cc-dark-gold);
+}
+
+.modal-button-main.review-button:disabled,
+.modal-button-main.review-button:disabled:hover {
+  width: 16rem;
+  background-color: var(--cc-light-gold);
+  cursor: auto;
+}
+
+.star-rating-component {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.MuiRating-iconEmpty {
+  color: red;
+}
+
+.review-error-message {
+  color: var(--cc-red);
+}
