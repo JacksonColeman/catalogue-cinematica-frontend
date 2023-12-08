@@ -19,6 +19,7 @@ const App = () => {
         "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/check",
         {
           method: "GET",
+          credentials: "include",
         }
       );
 
