@@ -2,3 +2,9 @@
   from = "/*"
   to = "/"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com"
+    Access-Control-Allow-Credentials = "true"
