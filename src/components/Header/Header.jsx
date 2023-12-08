@@ -135,7 +135,12 @@ const Header = ({ isLoggedIn }) => {
           ) : (
             <>
               <li>
-                <a onClick={() => setOpenModal(true)}>Sign In</a>
+                <a
+                  className="header-sign-in-button"
+                  onClick={() => setOpenModal(true)}
+                >
+                  Sign In
+                </a>
                 <LoginModal
                   open={openModal}
                   handleCloseModal={() => setOpenModal(false)}

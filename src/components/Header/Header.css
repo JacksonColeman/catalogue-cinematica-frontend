@@ -228,3 +228,7 @@
     background-color: #212529f1;
   }
 }
+
+.header-sign-in-button {
+  cursor: pointer;
+}
