@@ -31,12 +31,9 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
 
   const checkIfMovieExists = async (tmdbID) => {
     try {
-      const response = await fetch(
-        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movies/${tmdbID}`,
-        {
-          credentials: "include", // Add this line
-        }
-      );
+      const response = await fetch(`/api/movies/${tmdbID}`, {
+        credentials: "include", // Add this line
+      });
       if (response.ok) {
         const movieData = await response.json();
         setBackendMovieData(movieData);
@@ -53,18 +50,15 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
 
   const postMovie = async (movieData) => {
     try {
-      const response = await fetch(
-        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movies",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            credentials: "true",
-          },
-          credentials: "include", // Add this line
-          body: JSON.stringify({ movie: movieData }),
-        }
-      );
+      const response = await fetch("/api/movies", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          credentials: "true",
+        },
+        credentials: "include", // Add this line
+        body: JSON.stringify({ movie: movieData }),
+      });
 
       if (!response.ok) {
         throw new Error("Movie creation failed");
@@ -138,20 +132,17 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
   // add to list
   const addToList = async (movieId, listName) => {
     try {
-      const response = await fetch(
-        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movie_lists/add_to_list",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify({
-            movie_id: movieId,
-            list_name: listName,
-          }),
-        }
-      );
+      const response = await fetch("/api/movie_lists/add_to_list", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          movie_id: movieId,
+          list_name: listName,
+        }),
+      });
 
       const data = await response.json();
       console.log(data); // Handle the response data as needed
@@ -162,20 +153,17 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
 
   const removeFromList = async (movieId, listName) => {
     try {
-      const response = await fetch(
-        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movie_lists/remove_from_list",
-        {
-          method: "DELETE",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            movie_id: movieId,
-            list_name: listName,
-          }),
-        }
-      );
+      const response = await fetch("/api/movie_lists/remove_from_list", {
+        method: "DELETE",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          movie_id: movieId,
+          list_name: listName,
+        }),
+      });
 
       const data = await response.json();
       console.log(data); // Handle the response data as needed

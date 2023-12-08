@@ -4,6 +4,30 @@
   status = 200
   force = true
 
+  [[redirects]]
+  from = "/account"
+  to = "/"
+  status = 200
+  force = true
+
+  [[redirects]]
+  from = "/films"
+  to = "/"
+  status = 200
+  force = true
+
+  [[redirects]]
+  from = "/reviews"
+  to = "/"
+  status = 200
+  force = true
+
+  [[redirects]]
+  from = "/movie/*"
+  to = "/"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

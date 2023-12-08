@@ -14,17 +14,14 @@ const ReviewComponent = ({ review, showMovie }) => {
       return;
     }
     try {
-      const response = await fetch(
-        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/${review.id}/like`,
-        {
-          method: "POST",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-            // Include any necessary authentication headers
-          },
-        }
-      );
+      const response = await fetch(`/api/reviews/${review.id}/like`, {
+        method: "POST",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          // Include any necessary authentication headers
+        },
+      });
 
       if (response.ok) {
         const data = await response.json();
@@ -48,17 +45,14 @@ const ReviewComponent = ({ review, showMovie }) => {
 
   const handleUnlike = async () => {
     try {
-      const response = await fetch(
-        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/${review.id}/unlike`,
-        {
-          method: "DELETE",
-          credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-            // Include any necessary authentication headers
-          },
-        }
-      );
+      const response = await fetch(`/api/reviews/${review.id}/unlike`, {
+        method: "DELETE",
+        credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          // Include any necessary authentication headers
+        },
+      });
 
       if (response.ok) {
         const data = await response.json();

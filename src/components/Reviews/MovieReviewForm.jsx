@@ -17,7 +17,7 @@ const MovieReviewForm = ({ movie, postMovie, active, handleCloseModal }) => {
   const checkIfMovieExists = async () => {
     try {
       const response = await fetch(
-        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movies/${movie.id}`,
+        `/api/movies/${movie.id}`,
         {
           credentials: "include", // Add this line
         }
@@ -47,7 +47,7 @@ const MovieReviewForm = ({ movie, postMovie, active, handleCloseModal }) => {
 
     try {
       const response = await fetch(
-        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews",
+        "/api/reviews",
         {
           method: "POST",
           headers: {

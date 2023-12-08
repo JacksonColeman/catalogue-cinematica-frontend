@@ -17,20 +17,17 @@ const LoginModal = ({ open, handleCloseModal }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch(
-        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include", // Place credentials option here
-          body: JSON.stringify({
-            username,
-            password,
-          }),
-        }
-      );
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include", // Place credentials option here
+        body: JSON.stringify({
+          username,
+          password,
+        }),
+      });
 
       const data = await response.json();
 

@@ -20,7 +20,7 @@ const SignupModal = ({ open, handleCloseModal }) => {
   const handleSignUp = async () => {
     try {
       const response = await fetch(
-        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/signup",
+        "/api/signup",
         {
           method: "POST",
           headers: {
