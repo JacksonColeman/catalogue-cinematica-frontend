@@ -47,7 +47,7 @@ const MovieReviewForm = ({ movie, postMovie, active, handleCloseModal }) => {
 
     try {
       const response = await fetch(
-        "/https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews",
+        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews",
         {
           method: "POST",
           headers: {
