@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./MovieReviewForm.css";
-import StarRating from "../Sandbox Elements/StarRating";
-import "../Sandbox Elements/StarRating.css";
+import "./StarRating.css";
 import Rating from "@mui/material/Rating";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 
