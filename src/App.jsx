@@ -6,7 +6,6 @@ import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Account from "./components/Account/Account";
 import Hero from "./components/Hero/Hero";
-import ListPage from "./components/Lists/ListPage";
 import ReviewPage from "./components/Reviews/ReviewPage";
 
 const App = () => {
