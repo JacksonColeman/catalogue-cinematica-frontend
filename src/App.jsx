@@ -17,9 +17,12 @@ const App = () => {
 
   const checkLoginStatus = async () => {
     try {
-      const response = await fetch("/api/check", {
-        method: "GET",
-      });
+      const response = await fetch(
+        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/check",
+        {
+          method: "GET",
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();

@@ -17,7 +17,9 @@ const MovieReviewForm = ({ movie, postMovie, active, handleCloseModal }) => {
 
   const checkIfMovieExists = async () => {
     try {
-      const response = await fetch(`/api/movies/${movie.id}`);
+      const response = await fetch(
+        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movies/${movie.id}`
+      );
       if (!response.ok) {
         // Movie does not exist, post it
         await postMovie();
@@ -42,14 +44,17 @@ const MovieReviewForm = ({ movie, postMovie, active, handleCloseModal }) => {
     };
 
     try {
-      const response = await fetch("/api/reviews", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          // Add any other headers you might need, e.g., authorization headers
-        },
-        body: JSON.stringify({ review: reviewData }),
-      });
+      const response = await fetch(
+        "/https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            // Add any other headers you might need, e.g., authorization headers
+          },
+          body: JSON.stringify({ review: reviewData }),
+        }
+      );
 
       if (!response.ok) {
         const resp = await response.json();

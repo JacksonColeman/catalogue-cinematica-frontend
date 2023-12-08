@@ -7,7 +7,9 @@ const ReviewPage = () => {
 
   useEffect(() => {
     // Fetch reviews from 'api/reviews/all'
-    fetch("api/reviews/all")
+    fetch(
+      "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/all"
+    )
       .then((response) => response.json())
       .then((data) => setReviews(data))
       .catch((error) => console.error("Error fetching reviews:", error));

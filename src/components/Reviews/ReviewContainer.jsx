@@ -8,7 +8,9 @@ const ReviewContainer = ({ movie }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/reviews/?tmdb_id=${movie.id}`);
+        const response = await fetch(
+          `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/?tmdb_id=${movie.id}`
+        );
         if (!response.ok) {
           throw new Error("Fetch failed");
         }

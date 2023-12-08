@@ -12,7 +12,9 @@ const Account = ({ userId }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await fetch(`/api/users/${userId}`);
+        const response = await fetch(
+          `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/users/${userId}`
+        );
         if (response.ok) {
           const userData = await response.json();
           setUser(userData);
@@ -34,10 +36,13 @@ const Account = ({ userId }) => {
   }, [userId]); // Run the effect when userId changes
 
   function handleLogout() {
-    fetch("/api/logout", {
-      method: "DELETE",
-      credentials: "include", // Include credentials (cookies) in the request
-    })
+    fetch(
+      "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/logout",
+      {
+        method: "DELETE",
+        credentials: "include", // Include credentials (cookies) in the request
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Logout failed");

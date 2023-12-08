@@ -19,18 +19,21 @@ const SignupModal = ({ open, handleCloseModal }) => {
 
   const handleSignUp = async () => {
     try {
-      const response = await fetch("/api/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          credentials: "include",
-        },
-        body: JSON.stringify({
-          username,
-          password,
-          password_confirmation: passwordConfirmation,
-        }),
-      });
+      const response = await fetch(
+        "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            credentials: "include",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+            password_confirmation: passwordConfirmation,
+          }),
+        }
+      );
 
       const data = await response.json();
 
