@@ -45,22 +45,6 @@ const App = () => {
     checkLoginStatus();
   }, [navigate]);
 
-  const handleSearch = async (query) => {
-    // Call the API to search for movies
-    if (query == "") {
-      fetchDiscoverMovies();
-      return;
-    }
-    try {
-      const apiEndpoint = "https://api.themoviedb.org/3/search/movie";
-      const response = await fetch(
-        `${apiEndpoint}?&append_to_response=credits&include_adult=false&query=${query}&api_key=${"67efd9f8bb8609b38ab7599192991049"}`
-      );
-      const data = await response.json();
-      setMovies(data.results);
-    } catch (error) {}
-  };
-
   return (
     <div className="app">
       {/* <img src="../public/img/seats.jpg" /> */}

@@ -18,6 +18,7 @@ const ReviewComponent = ({ review, showMovie }) => {
         `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/${review.id}/like`,
         {
           method: "POST",
+          credentials: "include",
           headers: {
             "Content-Type": "application/json",
             // Include any necessary authentication headers
@@ -51,6 +52,7 @@ const ReviewComponent = ({ review, showMovie }) => {
         `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/reviews/${review.id}/unlike`,
         {
           method: "DELETE",
+          credentials: "include",
           headers: {
             "Content-Type": "application/json",
             // Include any necessary authentication headers

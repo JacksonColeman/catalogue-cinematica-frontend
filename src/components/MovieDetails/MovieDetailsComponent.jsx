@@ -32,7 +32,10 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
   const checkIfMovieExists = async (tmdbID) => {
     try {
       const response = await fetch(
-        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movies/${tmdbID}`
+        `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movies/${tmdbID}`,
+        {
+          credentials: "include", // Add this line
+        }
       );
       if (response.ok) {
         const movieData = await response.json();
@@ -58,6 +61,7 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
             "Content-Type": "application/json",
             credentials: "true",
           },
+          credentials: "include", // Add this line
           body: JSON.stringify({ movie: movieData }),
         }
       );
@@ -141,6 +145,7 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify({
             movie_id: movieId,
             list_name: listName,
@@ -161,6 +166,7 @@ const MovieDetailsComponent = ({ isLoggedIn }) => {
         "https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/movie_lists/remove_from_list",
         {
           method: "DELETE",
+          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },

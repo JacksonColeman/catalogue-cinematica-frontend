@@ -13,7 +13,10 @@ const Account = ({ userId }) => {
     const fetchUser = async () => {
       try {
         const response = await fetch(
-          `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/users/${userId}`
+          `https://catalogue-cinematica-backend-74ab338129b9.herokuapp.com/users/${userId}`,
+          {
+            credentials: "include", // Add this line
+          }
         );
         if (response.ok) {
           const userData = await response.json();
