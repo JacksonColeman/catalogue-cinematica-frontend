@@ -41,3 +41,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.styled-poster {
+  border: 0.2px solid var(--cc-grey-5);
+  border-radius: 3px;
+}
+
+.styled-poster:hover {
+  border: 2px solid var(--cc-gold);
+  cursor: pointer;
+}

@@ -26,7 +26,7 @@ const MoviePostersDisplay = ({ collectionName, movies }) => {
         {displayedMovies.map((m, index) => (
           <div className="movie-poster-item" key={index}>
             <img
-              className="movie-poster-display-img"
+              className="movie-poster-display-img styled-poster"
               src={
                 m.poster_path
                   ? `https://image.tmdb.org/t/p/w185/${m.poster_path}`

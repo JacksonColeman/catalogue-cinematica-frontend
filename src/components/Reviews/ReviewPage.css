@@ -4,6 +4,33 @@
   margin-top: 2rem;
 }
 
+.review-body {
+  width: 100%;
+}
+
+.review-date {
+  display: none;
+}
+
+.review-date-footer {
+  font-size: 0.8rem;
+  color: var(--cc-grey-5);
+}
+
+@media (max-width: 650px) {
+  /* .review-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 0px;
+  } */
+  .review-date {
+    display: none;
+  }
+  .review-date-footer {
+    display: inline;
+  }
+}
+
 .review-page-review-container {
   display: grid;
   grid-template-columns: 1fr 1fr;

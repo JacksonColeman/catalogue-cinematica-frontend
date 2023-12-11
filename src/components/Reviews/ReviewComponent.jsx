@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import "./ReviewComponent.css";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
@@ -78,15 +79,17 @@ const ReviewComponent = ({ review, showMovie }) => {
     return (
       <div className="review-item sm-review-item">
         <div className="review-poster-container">
-          <img
-            className="movie-poster-img"
-            src={
-              reviewData.movie.poster_path
-                ? `https://image.tmdb.org/t/p/w185/${reviewData.movie.poster_path}`
-                : "/img/poster-placeholder.jpg"
-            }
-            alt={`${reviewData.movie.title} Poster`}
-          />
+          <Link to={`/movie/${reviewData.movie.tmdb_id}`}>
+            <img
+              className="movie-poster-img styled-poster"
+              src={
+                reviewData.movie.poster_path
+                  ? `https://image.tmdb.org/t/p/w185/${reviewData.movie.poster_path}`
+                  : "/img/poster-placeholder.jpg"
+              }
+              alt={`${reviewData.movie.title} Poster`}
+            />
+          </Link>
         </div>
         <div className="review-body">
           <a
@@ -118,6 +121,9 @@ const ReviewComponent = ({ review, showMovie }) => {
               />
             )}
             <span>{reviewData.likes_count} likes</span>
+            <p className="review-date-footer">
+              {new Date(reviewData.created_at).toLocaleDateString()}
+            </p>
             {/* <a href="#" className="reply-button">
           Reply
         </a> */}
