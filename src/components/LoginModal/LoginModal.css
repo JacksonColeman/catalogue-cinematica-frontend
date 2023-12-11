@@ -15,7 +15,7 @@
   margin: 0 auto;
   width: 20rem;
   min-height: 20rem;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 25%);
   background-color: var(--cc-grey-7);
   color: var(--cc-light-grey);
   border-radius: 5px;
@@ -58,6 +58,7 @@
   font-family: inherit;
   color: var(--cc-dark-grey);
   font-weight: 500;
+  margin-top: 1rem;
 }
 
 .modal-button-main:hover {
@@ -103,4 +104,8 @@
   display: inline-block;
   color: var(--cc-dark-gold);
   cursor: pointer;
+}
+
+.modal-label {
+  margin-bottom: 1rem;
 }

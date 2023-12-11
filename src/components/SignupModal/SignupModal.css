@@ -15,7 +15,7 @@
   margin: 0 auto;
   width: 20rem;
   min-height: 20rem;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 25%);
   background-color: var(--cc-grey-7);
   color: var(--cc-light-grey);
   border-radius: 5px;
@@ -40,4 +40,50 @@
   top: 16px;
   right: 20px;
   width: 24px;
+}
+
+.error-message {
+  font-size: 0.73rem;
+  margin-bottom: 0.5rem;
+}
+
+.password-info {
+  margin-top: 1rem;
+  font-size: 0.73rem;
+  font-weight: 400;
+}
+
+.modal-error-container {
+  list-style: none;
+}
+
+.modal-error-container li:last-child {
+  margin-bottom: 1rem;
+}
+
+.valid {
+  color: greenyellow;
+}
+
+.modal-button-main:disabled {
+  /* Styles for the disabled state go here */
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--cc-grey-5);
+}
+
+.password-toggle {
+  font-size: 1rem;
+}
+
+.modal-label {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust as needed to position the icon */
+  transform: translateY(-40%);
+  cursor: pointer;
 }

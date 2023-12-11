@@ -3,6 +3,8 @@ import "./LoginModal.css";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import { FaUser } from "@react-icons/all-files/fa/FaUser";
 import { FaLock } from "@react-icons/all-files/fa/FaLock";
+import { FaEye } from "@react-icons/all-files/fa/FaEye";
+import { FaEyeSlash } from "@react-icons/all-files/fa/FaEyeSlash";
 import SignupModal from "../SignupModal/SignupModal";
 
 const LoginModal = ({ open, handleCloseModal }) => {
@@ -14,6 +16,7 @@ const LoginModal = ({ open, handleCloseModal }) => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
   const [signUp, setSignUp] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const handleLogin = async () => {
     try {
@@ -55,6 +58,10 @@ const LoginModal = ({ open, handleCloseModal }) => {
     return <SignupModal open={true} handleCloseModal={handleCloseModal} />;
   }
 
+  const handleTogglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
+
   return (
     <div className="modal-component">
       <div className="overlay" onClick={handleCloseModal}></div>
@@ -80,18 +87,22 @@ const LoginModal = ({ open, handleCloseModal }) => {
                 onChange={(e) => setUsername(e.target.value)}
               />
             </label>
-            <br />
             <label className="modal-label">
               <FaLock />
               <input
                 className="modal-input"
-                type="password"
+                type={isPasswordVisible ? "text" : "password"}
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <span
+                className="password-toggle"
+                onClick={handleTogglePasswordVisibility}
+              >
+                {isPasswordVisible ? <FaEyeSlash /> : <FaEye />}
+              </span>
             </label>
-            <br />
             <div className="modal-error-container">
               {errors.map((error) => (
                 <p className="error-message">{error}</p>
