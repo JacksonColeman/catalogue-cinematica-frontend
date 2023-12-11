@@ -1,8 +1,18 @@
-# React + Vite
+# Catalogue Cinematica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Catalogue Cinematica is a full-stack movie review site designed to enhance user engagement and film discovery. Users can create accounts, search for films, add them to favorites and watchlists, and leave reviews. The site is built with React for the frontend and Rails for the backend API.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication:** Secure account creation and login processes with password validation and encryption.
+- **Film Search:** Effortlessly search for films using the integrated TMDB API, providing access to a vast movie database.
+- **Personalized Experience:** Curate a favorites list, watchlist, and leave reviews on individual movie pages.
+- **Sleek Design:** The site features a sleek and attractive design implemented with CSS.
+
+## Live Site
+
+Explore the live site hosted on Netlify: [Catalogue Cinematica](https://catalogue-cinematica.netlify.app/)
+
+## Backend Repository
+
+Access the backend repository on GitHub: [Catalogue Cinematica Backend](link-to-backend-github)
