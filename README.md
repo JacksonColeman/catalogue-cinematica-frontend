@@ -15,4 +15,4 @@ Explore the live site hosted on Netlify: [Catalogue Cinematica](https://catalogu
 
 ## Backend Repository
 
-Access the backend repository on GitHub: [Catalogue Cinematica Backend](link-to-backend-github)
+Access the backend repository on GitHub: [Catalogue Cinematica Backend](https://github.com/JacksonColeman/catalogue-cinematica-backend)
